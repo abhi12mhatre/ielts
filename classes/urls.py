@@ -17,9 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from ielts.views import home
+from ielts.views import home, courses, about_us, login, logout, register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
+    path('courses', courses),
+    path('about_us', about_us),
+    path('login', login),
+    path('logout', logout),
+    path('register', register),
 ]
