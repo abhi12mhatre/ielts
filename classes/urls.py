@@ -17,14 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from ielts.views import home, courses, about_us, login, logout, register
+from ielts.views import home, courses, about_us, user_login, user_logout, register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', home, name='home'),
     path('courses', courses),
     path('about_us', about_us),
-    path('login', login),
-    path('logout', logout),
-    path('register', register),
+    path('login', user_login, name='user_login'),
+    path('logout', user_logout, name='user_logout'),
+    path('register', register, name='register'),
 ]
